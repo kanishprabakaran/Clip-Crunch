@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+.logo img.youtube-logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.hero-container {
+  margin-top: 80px;
+}
+h1 {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: white;
+}
+input {
+  width: 70%;
+  padding: 0.8em;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  outline: none;
+}
+button {
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+}
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Summary Section */
+.summary-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 50px auto;
+}
+.video-details img {
+  width: 100%;
+  border-radius: 10px;
+}
+.summary-section button {
+  background-color: #2563eb;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+/* One-click Summary Section */
+.one-click-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+/* Loading spinner */
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #1e3a8a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: none; /* Initially hidden */
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add this class to center spinner in summary box */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust as needed */
+}
+#summaryText {
+  display: block;
+  visibility: visible;
+}
+.summary-video-box {
+  width: 48%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.summary-text-box {
+  width: 48%;
+  height: 300px; /* Fixed height for the box */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+  word-wrap: break-word; /* Ensure long words break properly */
+}
+
+.summary-text-box h3 {
+  color: #1e3a8a;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.summary-text-box p {
+  color: #4b5563;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+/* Custom scrollbar styling */
+.summary-text-box::-webkit-scrollbar {
+  width: 8px; /* Width of scrollbar */
+}
+
+.summary-text-box::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background color of the scrollbar track */
+  border-radius: 10px;
+}
+
+.summary-text-box::-webkit-scrollbar-thumb {
+  background-color: #1e3a8a; /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* Adds spacing around the thumb */
+}
+
+.summary-text-box::-webkit-scrollbar-thumb:hover {
+  background-color: #2563eb; /* Darken on hover for better visibility */
+}
+
+
+/* How to Summarize Section */
+.how-to-summarize {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+}
+.how-to-summarize h2 {
+  font-size: 2em;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+.how-to-summarize p {
+  font-size: 1.1em;
+  color: #4b5563;
+  margin-bottom: 30px;
+}
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.step-box {
+  width: 30%;
+  background-color: #e0f2ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+.step-box h3 {
+  color: #1e3a8a;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.step-box p {
+  color: #4b5563;
+  font-size: 1em;
+}
+@media (max-width: 768px) {
+  .step-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}

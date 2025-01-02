@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bardx.ai - YouTube AI Summarizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo2.png" alt="YouTube Logo" class="youtube-logo">
+      <span>Bardx.ai</span>
+    </div>
+    <div class="hero-container">
+      <h1>Instant YouTube Summaries</h1>
+      <p>Get AI-powered summaries for any YouTube video with just a URL</p>
+      <input type="text" id="youtubeUrl" placeholder="Paste YouTube URL here..." />
+      <button id="summaryButton">Get Summary</button>
+    </div>
+  </header>
+  <section class="one-click-summary">
+    <div class="summary-video-box">
+      <h2>Video Preview</h2>
+      <iframe id="videoPlayer" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="summary-text-box">
+      <h3>Video Summary</h3>
+      <div class="loading-container">
+        <div id="loadingSpinner" class="loading-spinner"></div>
+      </div>
+      <p id="summaryText">Your video summary will appear here.</p>
+    </div>    
+  </section>
+  <footer>
+    <p>© 2024 Bardx.ai | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
