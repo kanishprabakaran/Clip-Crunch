@@ -23,6 +23,19 @@ This project is a **YouTube Video Summarizer** that allows users to input the UR
    - The entire application is deployed on **Azure**, making it accessible via the web.
 
 ---
+## Screenshots
+### Home
+![Summary Display](img3.jpg)
+
+### Example 1
+![Home Page](img1.jpg)
+
+### Example 1
+![Transcription in Progress](img2.jpg)
+
+
+### Backend workflow
+![Azure Deployment Confirmation](img4.jpg)
 
 ## Installation
 
